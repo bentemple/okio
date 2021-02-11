@@ -37,7 +37,7 @@ kotlin {
     withJava()
   }
   if (kmpJsEnabled) {
-    js {
+    js(BOTH) {
       configure([compilations.main, compilations.test]) {
         tasks.getByName(compileKotlinTaskName).kotlinOptions {
           moduleKind = "umd"
@@ -95,7 +95,7 @@ kotlin {
       }
     }
     jvmTest {
-      kotlin.srcDirs += 'src/hashFunctions/kotlin'
+//      kotlin.srcDirs += 'src/hashFunctions/kotlin'
       dependencies {
         implementation deps.test.junit
         implementation deps.test.assertj

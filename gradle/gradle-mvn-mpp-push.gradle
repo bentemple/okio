@@ -114,12 +114,12 @@ publishing {
     }
   }
 
-  afterEvaluate {
-    publications.getByName('kotlinMultiplatform') {
-      // Source jars are only created for platforms, not the common artifact.
-      artifact emptySourcesJar
-    }
-  }
+//  afterEvaluate {
+//    publications.getByName('kotlinMultiplatform') {
+//      // Source jars are only created for platforms, not the common artifact.
+//      artifact emptySourcesJar
+//    }
+//  }
 
   repositories {
     maven {
